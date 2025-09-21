@@ -22,6 +22,16 @@ assign parallel_out_next = (load_enable&serial_parallel) ? parallel_in :
 assign serial_out = parallel_out[0];
 
 //complete here
+/*
+always_ff @( posedge clk or negedge arst_n ) begin : N_size_register
+    if (!arst_n)
+        s_rst <= 1'b1;
+    else
+        s_rst <= 1'b0;
+end
+*/
+
+
 
 always_ff @( posedge clk or negedge rst_n ) begin : N_size_register
     if (!rst_n)

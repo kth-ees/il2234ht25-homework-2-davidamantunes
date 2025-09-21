@@ -1,0 +1,9 @@
+# Ignore everything by default
+*
+
+# But don't ignore files, dir and itself
+!*.sv
+# !*Makefile
+!*.md
+!*/
+!.gitignore
